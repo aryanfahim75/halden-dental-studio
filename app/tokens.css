@@ -1,0 +1,130 @@
+/* Dental Studio · Design Tokens
+ * Pearl/Teal editorial palette · Bricolage Grotesque display · Manrope UI
+ * Single bright theme (no dark mode) by design
+ */
+
+:root {
+  /* Core palette */
+  --pearl: #F0EEE9;
+  --white: #FAF8F4;
+  --mist: #E3E7E3;
+  --pine: #0E4F55;
+  --pine-2: #145F64;
+  --teal: #0B6065;
+  --ink: #0A2B2F;
+  --sage: #3C5356;
+  --gold: #F4BE9B;
+  --on-pine: #F6F3EC;
+  --on-pine-2: #D3E2DF;
+  --line: #CFD6D2;
+
+  /* Semantic aliases (used by existing components) */
+  --bg: var(--pearl);
+  --surface: var(--white);
+  --fg: var(--ink);
+  --muted: var(--sage);
+  --accent: var(--gold);
+  --on-accent: var(--ink);
+  --accent-hover: #E9A87E;
+  --gum: #C93A63;
+  --gum-hover: #B9355A;
+
+  /* Film variants (for sections with dark background) */
+  --film: var(--pine);
+  --film-fg: var(--on-pine);
+  --film-muted: var(--on-pine-2);
+  --film-accent: var(--gold);
+  --film-accent-hover: var(--on-pine);
+  --film-on-accent: var(--pine);
+  --film-line: rgba(241, 242, 238, 0.18);
+  --film-gum: #FF8BA7;
+
+  /* Typography */
+  --font-display: var(--font-bricolage), "Helvetica Neue", Arial, sans-serif;
+  --font-body: var(--font-manrope), "Helvetica Neue", Arial, sans-serif;
+  --font-serif: var(--font-newsreader), "Iowan Old Style", Georgia, serif;
+  --font-mono: var(--font-dmmono), ui-monospace, monospace;
+
+  --text-display: clamp(3.6rem, 11.6vw, 13.5rem);
+  --text-h1: clamp(2.7rem, 5vw, 4.8rem);
+  --text-h2: clamp(2.2rem, 4vw, 3.6rem);
+  --text-h3: clamp(1.9rem, 3vw, 2.7rem);
+  --text-lead: 1.125rem;
+  --text-md: 1rem;
+  --text-sm: 0.875rem;
+  --text-label: 0.8125rem;
+
+  --lh-display: 1;
+  --lh-h1: 1.0;
+  --lh-h2: 1.0;
+  --lh-lead: 1.6;
+  --lh-md: 1.6;
+  --lh-sm: 1.5;
+
+  --track-display: -0.04em;
+  --track-label: 0.14em;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* Radius */
+  --radius-input: 8px;
+  --radius-panel: 16px;
+  --radius-chip: 999px;
+
+  /* Shadows */
+  --shadow-assistant: 0 16px 48px rgba(39, 52, 59, 0.15);
+
+  /* Duration */
+  --dur-fast: 200ms;
+  --dur-med: 300ms;
+  --dur-long: 600ms;
+  --dur-page: 240ms;
+  --dur-step: 280ms;
+  --dur-shade: 400ms;
+  --dur-reveal: 500ms;
+  --dur-rise: 900ms;
+
+  /* Easing */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Legacy aliases */
+  --color-paper: var(--bg);
+  --color-ink: var(--fg);
+  --color-muted: var(--muted);
+  --color-rule: var(--line);
+  --color-surface: var(--surface);
+  --color-accent-ink: var(--on-accent);
+  --color-focus: var(--accent);
+  --color-film: var(--film);
+  --color-film-ink: var(--film-fg);
+  --color-film-muted: var(--film-muted);
+  --color-film-accent: var(--film-accent);
+}
+
+/* Single bright theme by design — no dark mode overrides. */
+:root,
+:root[data-theme="light"],
+:root[data-theme="dark"] {
+  --bg: var(--pearl);
+  --surface: var(--white);
+  --fg: var(--ink);
+  --muted: var(--sage);
+  --line: #CFD6D2;
+  --accent: var(--gold);
+  --on-accent: var(--ink);
+  --accent-hover: #E9A87E;
+  --gum: #C93A63;
+  --gum-hover: #B9355A;
+}
